@@ -22,8 +22,9 @@ First, add oklab to your `tailwind.config.js` file:
 
 ```js
 // tailwind.config.js
+const { oklab } = require("@josephmark/tailwind-plugins")
 module.exports = {
-  plugins: [require("@josephmark/tailwind-plugins/oklab")],
+  plugins: [oklab],
 }
 ```
 
