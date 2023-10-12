@@ -42,7 +42,7 @@ Check for CSS support of Oklab gradient interpolation
 
 ### Utilities
 
-Note - all Oklab colour utilities currently JIT values only since your theme is probably in hex or RGB.
+Note - all Oklab colour utilities currently allow JIT values only since your theme is probably in hex or RGB.
 
 **`bg-gradient-oklab-to-[direction]`**
 
