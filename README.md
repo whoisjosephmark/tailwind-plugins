@@ -1,5 +1,7 @@
 # @josephmark/hooks
 
+[![Run Tests](https://github.com/whoisjosephmark/tailwind-plugins/actions/workflows/test.yml/badge.svg)](https://github.com/whoisjosephmark/tailwind-plugins/actions/workflows/test.yml)
+
 A collection of useful Tailwind plugins from the team at [Josephmark](https://josephmark.studio)
 
 ## Installation
