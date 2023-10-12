@@ -21,7 +21,9 @@
     "build:cjs": "tsc --module commonjs --outDir dist/cjs"
   },
   "keywords": [
-    "tailwindcss"
+    "tailwindcss",
+    "plugin",
+    "oklab"
   ],
   "author": "@floatingdino",
   "license": "MIT",
