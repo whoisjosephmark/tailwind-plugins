@@ -12,6 +12,10 @@
       "types": "./dist/esm/index.d.ts"
     }
   },
+  "files": [
+    "*.js",
+    "*.d.ts"
+  ],
   "scripts": {
     "test": "eslint ./src/* && tsc --noEmit",
     "build": "npm run build:esm && npm run build:cjs",
