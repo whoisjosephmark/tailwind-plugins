@@ -16,6 +16,7 @@ const oklabPlugin = plugin(function addOkLab({ matchUtilities, addVariant }) {
     "@supports (background-image: linear-gradient(in oklab, #fff, #fff))"
   )
   addVariant("supports-oklab", "@supports (color: oklab(0 0 0))")
+
   matchUtilities(
     {
       "bg-gradient-oklab-to": (value) => ({
@@ -35,6 +36,33 @@ const oklabPlugin = plugin(function addOkLab({ matchUtilities, addVariant }) {
       },
     }
   )
+
+  matchUtilities({
+    "from-oklab": (value) => ({
+      "--tw-gradient-from": `oklab(${value}) var(--tw-gradient-from-position)`,
+    }),
+    "via-oklab": (value) => ({
+      "--tw-gradient-stops": `var(--tw-gradient-from), oklab(${value}) var(--tw-gradient-via-position), var(--tw-gradient-to)`,
+    }),
+    "to-oklab": (value) => ({
+      "--tw-gradient-to": `oklab(${value}) var(--tw-gradient-to-position)`,
+    }),
+  })
+
+  matchUtilities({
+    "text-oklab": (value) => {
+      return {
+        "--tw-text-opacity": "1",
+        color: `oklab(${value} / --tw-text-opacity)`,
+      }
+    },
+    "bg-oklab": (value) => {
+      return {
+        "--tw-bg-opacity": "1",
+        backgroundColor: `oklab(${value} / var(--tw-bg-opacity))`,
+      }
+    },
+  })
 })
 
 export default oklabPlugin
