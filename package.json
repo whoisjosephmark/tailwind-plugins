@@ -13,13 +13,13 @@
     }
   },
   "files": [
-    "*.js",
-    "*.d.ts"
+    "dist/**/*.js",
+    "dist/**/*.d.ts"
   ],
   "scripts": {
     "test": "eslint ./src/* && tsc --noEmit",
     "build": "npm run build:esm && npm run build:cjs",
-    "clean": "rm -r ./lib",
+    "clean": "rm -r ./dist",
     "prepare": "npm run build",
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs"
