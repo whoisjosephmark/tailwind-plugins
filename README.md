@@ -11,6 +11,7 @@ A collection of useful Tailwind plugins from the team at [Josephmark](https://jo
 ## Available Plugins
 
 - [oklab](#oklab)
+- [containment](#containment)
 
 ## `oklab`
 
@@ -81,3 +82,39 @@ eg: `text-oklab-[0.77_-0.09_-0.06]`
 Set background to an Oklab colour
 
 eg: `bg-oklab-[0.77_-0.09_-0.06]`
+
+## `containment`
+
+[CSS containment](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment) can help with rendering optimisation, especially on long pages with lots of elements. Setting `contain-content content-visibility-auto` on an element will let the browser skip rendering it when it is offscreen, saving on render time.
+
+### Configuration
+
+First, add containment to your `tailwind.config.js` file:
+
+```js
+// tailwind.config.js
+const { containment } = require("@josephmark/tailwind-plugins")
+module.exports = {
+  plugins: [containment],
+}
+```
+
+### Utilities
+
+**`contain-[value]`**
+
+Set the element's [containment mode](https://developer.mozilla.org/en-US/docs/Web/CSS/contain). Default values are available, and JIT values can be added for specific needs / combination values.
+
+eg: `contain-content` or `contain-[paint_layout]`
+
+**`content-visibility-[value]`**
+
+Set the element's [content visibility property](https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility).
+
+eg: `content-visibility-auto` or `content-visibility-hidden`
+
+**`contain-intrinsic-size`**
+
+Set the element's [contain-intrinsic-size property](https://developer.mozilla.org/en-US/docs/Web/CSS/contain-intrinsic-size). This allows culled elements to contribute to the page's scroll height to minimise scrollbar jank.
+
+eg: `contain-intrinsic-size-auto` or `contain-intrinsic-size-[auto_500px]`
