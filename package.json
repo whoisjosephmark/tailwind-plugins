@@ -16,6 +16,7 @@
     "dist/**/*.js",
     "dist/**/*.d.ts"
   ],
+  "sideEffects": false,
   "scripts": {
     "test": "eslint ./src/* && tsc --noEmit",
     "build": "npm run build:esm && npm run build:cjs",
