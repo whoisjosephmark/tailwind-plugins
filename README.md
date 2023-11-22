@@ -1,4 +1,4 @@
-# @josephmark/hooks
+# @josephmark/tailwind-plugins
 
 [![Run Tests](https://github.com/whoisjosephmark/tailwind-plugins/actions/workflows/test.yml/badge.svg)](https://github.com/whoisjosephmark/tailwind-plugins/actions/workflows/test.yml)
 
